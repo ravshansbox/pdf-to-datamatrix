@@ -3,6 +3,8 @@ import express, { Request } from 'express';
 import { createServer } from 'http';
 
 const app = express();
+app.set('etag', false);
+app.set('x-powered-by', false);
 
 const { HTTP_PORT = '80' } = process.env;
 
