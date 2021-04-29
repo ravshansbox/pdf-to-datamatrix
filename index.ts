@@ -28,7 +28,6 @@ app.post('/', (request, response) => {
   const cp = spawn('dmtxread', ['-n', '-r', resolution]);
   request.pipe(cp.stdin);
   cp.stdout.pipe(response);
-  cp.stderr.pipe(response);
 });
 
 const server = createServer(app);
