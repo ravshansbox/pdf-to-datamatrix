@@ -15,6 +15,8 @@ before_script:
 build:
   stage: build
   only:
+    - develop
+    - main
     - master
   script:
     - docker build -t ${IMAGE} .
